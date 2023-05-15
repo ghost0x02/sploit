@@ -38,6 +38,7 @@ print(Fore.RED + """
 
 ╚══════╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝   ╚═╝
 
+
 """)
 
 print(Style.RESET_ALL)
