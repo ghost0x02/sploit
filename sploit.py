@@ -11,7 +11,7 @@ import ipaddress
 import requests
 
 from colorama import Fore, Style
-print(Fore.RED + "1.0")
+print(Fore.RED + "")
 
 os.system("figlet sploit")
       
