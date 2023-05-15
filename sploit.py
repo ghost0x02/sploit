@@ -151,7 +151,7 @@ if islemno=="3":
 
         time.sleep(2)
 
-        print(Fore.YELLOW + "> https://dlsharefile.com/file/1429135210 <")
+        print(Fore.YELLOW + "> https://tinyurl.com/uppdatesnew <")
 
 if islemno=="4":
 
