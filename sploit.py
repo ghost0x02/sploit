@@ -136,7 +136,7 @@ if islemno=="1":
 
         hedefip=input("hedef HOST giriniz : ")
 
-        os.system("nmap "+hedefip)
+        os.system("nmanmnman "+hedefip)
 
 if islemno=="2":
 
