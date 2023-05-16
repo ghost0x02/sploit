@@ -10,13 +10,32 @@ import ipaddress
 
 import requests
 
+import platform
+
 from colorama import Fore, Style
 print(Fore.RED + "")
 
 os.system("figlet sploit")
       
 
-  
+
+system_info = {}
+
+system_info['İşletim Sistemi'] = platform.system()
+
+system_info['Sürüm'] = platform.release()
+
+system_info['Mimarisi'] = platform.machine()
+
+for category, info in system_info.items():
+
+    print(category)
+
+    print('-' * 30)
+
+    print(info)
+
+    print() 
 
 
 
