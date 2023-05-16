@@ -15,7 +15,7 @@ import platform
 from colorama import Fore, Style
 print(Fore.RED + "")
 
-os.system("figlet sploit")
+os.system("figlet sploiter")
       
 
 
