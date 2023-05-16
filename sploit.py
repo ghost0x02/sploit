@@ -31,7 +31,7 @@ for category, info in system_info.items():
 
     print(category)
 
-    print('-' * 30)
+    print('=' * 30)
 
     print(info)
 
