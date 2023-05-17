@@ -1,0 +1,5 @@
+git clone https://github.com/ghost0x02/sploit
+
+cd sploit
+
+python3 sploit.py
