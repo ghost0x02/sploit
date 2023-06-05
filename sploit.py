@@ -118,7 +118,7 @@ print(Fore.BLUE + """
 
 [1] NMAP SCANNER
 
-[2] NMAP PING SCANNER
+[2] NMAP VERSİYON BİLGİSİ
 
 [3] E-VİRÜS
 
@@ -142,7 +142,7 @@ if islemno=="2":
 
         hedefip=input("hedef HOST giriniz : ")
 
-        os.system("nmap -sP -v  "+hedefip)
+        os.system("nmap -sV  "+hedefip)
 
 if islemno=="3":
 
