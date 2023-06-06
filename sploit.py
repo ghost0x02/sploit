@@ -240,56 +240,68 @@ cupp()
 
 print(">>>>>Biraz bekleyin site ip tarama aracına yönlendiriliyorsunuz<<<<<")
 
-time.sleep(4)
+time.sleep(3)
 
-os.system("figlet IP")
+os.system("figlet ip")
 
-def check_ip_address(domain):
+ip = input('site adı gir: ')
 
-    try:
+a = f'http://ip-api.com/json/{ip}'
 
-        ip = socket.gethostbyname(domain)
+a2 = requests.get(a)
 
-        print("Site: {}  IP Adresi: {}".format(domain, ip))
+a3 = a2.json()
 
-    except socket.gaierror:
+status = a3["status"]
 
-        print("Geçersiz bir site adı.")
+cidade = a3["city"]
 
-site = input("Site girin: ")
+q = a3["query"]
 
-check_ip_address(site)
+país = a3["country"]
 
-def get_local_ip():
+cdp = a3["countryCode"]
 
-    try:
+sestate = a3["region"]
 
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+state = a3["regionName"]
 
-        sock.connect(("8.8.8.8", 80))
+zip = a3["zip"]
 
-        local_ip = sock.getsockname()[0]
+lat = a3["lat"]
 
-        sock.close()
+long = a3["lon"]
 
-        return local_ip
+timez = a3["timezone"]
 
-    except socket.error:
+op = a3["isp"]
 
-        return "IP adresi alınamadı."
+org = a3["org"]
 
-ip_address = get_local_ip()
+As = a3["as"]
 
-print("Kendi Yerel IP Adresiniz:", ip_address)
+print(f'ip = {q}')
 
-hostname = socket.gethostname()
+print(f'status = {status}')
 
-print("Hostname:", hostname)
+print(f'país  = {país}')
 
-response = requests.get("http://ip-api.com/json")
+print(f'sigla = {cdp}')
 
-data = response.json()
+print(f'estado = {state}-{sestate}')
 
-gateway = data["query"]
+print(f'cidade = {cidade}')
 
-print("Ağ Geçidiniz:", gateway)
+print(f'zip = {zip}')
+
+print(f'latitude = {lat}')
+
+print(f'longitude = {long}')
+
+print(f'continente/cidade = {timez}')
+
+print(f'isp = {op}')
+
+print(f'org = {org}')
+
+print(f'As = {As}')
