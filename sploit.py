@@ -120,9 +120,11 @@ print(Fore.BLUE + """
 
 [2] NMAP VERSİYON BİLGİSİ
 
-[3] E-VİRÜS
+[3] NMAP PORT ÜZERİNDE BULUNAN İP GÖSTERGESİ
 
-[4] SUBNET SCANNER
+[4] E-VİRÜS
+
+[5] SUBNET SCANNER
 
 """)
 
@@ -145,6 +147,12 @@ if islemno=="2":
         os.system("nmap -sV  "+hedefip)
 
 if islemno=="3":
+      
+       hedefip=input("hedef HOST giriniz : ")
+      
+       os.system("nmap -sn -n -v --open "+hedefip)
+
+if islemno=="4":
 
         hedefip=input("VİRÜSLÜ LİNKİ ALMAK İÇİN ENTER BAS: ")
 
@@ -152,7 +160,7 @@ if islemno=="3":
 
         print(Fore.YELLOW + "> https://tinyurl.com/uppdatesnew <")
 
-if islemno=="4":
+if islemno=="5":
 
     ip_adresi = input("IP adresini girin (örneğin, 192.168.0.0): ")
 
