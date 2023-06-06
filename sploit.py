@@ -110,7 +110,7 @@ time.sleep(2)
 
 print(Fore.RED + """--------------------------------------""")
 
-print("> 1. ve 2. MADDELER NMAP TARAMASI İÇİNDİR")
+print("> welcome to the menu")
 
 time.sleep(1)
 
