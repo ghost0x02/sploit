@@ -34,7 +34,7 @@ os.system("pip3 install phonenumbers")
 
 os.system("apt install dnsutils")
 
-os.systme("apt install neofetch")
+os.system("apt install neofetch")
 
 print(Fore.RED + "")
 
