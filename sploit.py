@@ -331,8 +331,6 @@ if islemno == "8":
 
 if islemno == "9":
 
-    import subprocess
-
     def ping(host):
 
         try:
