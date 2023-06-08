@@ -299,14 +299,16 @@ if islemno == "7":
 
     phone_info()  
 
-
 if islemno == "8":
 
-hedefip=input("hedef site gir: ")
+    hedefip = input("Hedef site gir: ")
 
-os.system("figlet dig scanner")
+    os.system("figlet dig scanner")
 
-os.system("dig")
+    os.system("dig " + hedefip)
+
+    print("İşlem tamamlandı.")
+
 
 islemno = input("LÜTFEN 1 SAYISINA TIKLAYINIZ:  ")
 
