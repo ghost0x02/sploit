@@ -310,21 +310,21 @@ if islemno == "8":
     os.system("figlet dig scanner")
 
     os.system("dig " + hedefip)
-
+    time.sleep(1)
     os.system("dig ANY  " + hedefip)
-
+    time.sleep(1)
     os.system("dig TTL  " + hedefip)
-
+    time.sleep(1)
     os.system("dig +answer -x  " + hedefip)
-
+    time.sleep(1)
     os.system("dig +noall +answer  " + hedefip)
-
+    time.sleep(1)
     os.system("dig +nssearch " + hedefip)
-
+    time.sleep(1)
     os.system("dig -i  " + hedefip)
-
+    time.sleep(1) 
     os.system("dig +trace  " + hedefip)
-
+    time.sleep(1)
     os.system("dig +short  " + hedefip)
    
     print("İşlem tamamlandı.")
