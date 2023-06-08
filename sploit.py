@@ -32,6 +32,10 @@ os.system("pip3 install scapy")
 
 os.system("pip3 install phonenumbers")
 
+os.system("apt install dnsutils")
+
+os.systme("apt install neofetch")
+
 print(Fore.RED + "")
 
 os.system("figlet sploiter")
@@ -148,6 +152,8 @@ print(Fore.CYAN + """
 [6] DDOS SALDIRISI YAP
 
 [7] TELEFON NUMARADAN BİLGİ AL +90
+
+[8] DİG TARAMASI YAP
 
 """)
 
@@ -294,6 +300,13 @@ if islemno == "7":
     phone_info()  
 
 
+if islemno == "8":
+
+hedefip=input("hedef site gir: ")
+
+os.system("figlet dig scanner")
+
+os.system("dig")
 
 islemno = input("LÜTFEN 1 SAYISINA TIKLAYINIZ:  ")
 
