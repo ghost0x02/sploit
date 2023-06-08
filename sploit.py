@@ -22,6 +22,8 @@ import phonenumbers
 
 from phonenumbers import geocoder,carrier,timezone
 
+import subprocess
+
 os.system("pip3 install ipaddress")
 
 os.system("pip3 install requests")
@@ -154,6 +156,8 @@ print(Fore.CYAN + """
 [7] TELEFON NUMARADAN BİLGİ AL +90
 
 [8] DİG TARAMASI YAP
+
+[9] PİNG TARA
 
 """)
 
@@ -307,7 +311,50 @@ if islemno == "8":
 
     os.system("dig " + hedefip)
 
+    os.system("dig ANY  " + hedefip)
+
+    os.system("dig TTL  " + hedefip)
+
+    os.system("dig +answer -x  " + hedefip)
+
+    os.system("dig +noall +answer  " + hedefip)
+
+    os.system("dig +nssearch " + hedefip)
+
+    os.system("dig -i  " + hedefip)
+
+    os.system("dig +trace  " + hedefip)
+
+    os.system("dig +short  " + hedefip)
+   
     print("İşlem tamamlandı.")
+
+if islemno == "9":
+
+    import subprocess
+
+    def ping(host):
+
+        try:
+
+            output = subprocess.check_output(['ping', '-c', '4', host])
+
+            return output.decode('utf-8')
+
+        except subprocess.CalledProcessError as e:
+
+            return e.output.decode('utf-8')
+
+    print(Fore.CYAN + "")
+
+    hedefip = input("site gir: ")
+
+    os.system("figlet ping scanner")
+
+    ping_result = ping(hedefip)
+
+    print(ping_result)
+
 
 
 islemno = input("LÜTFEN 1 SAYISINA TIKLAYINIZ:  ")
