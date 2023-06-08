@@ -73,7 +73,7 @@ print(Fore.YELLOW +  """
 
         insta: enesxsec""")
 
-os.system("neofetch --ascii_distro blackarch")
+os.system("neofetch --ascii_distro alpine")
 
 def yukleme_animasyonu():
 
