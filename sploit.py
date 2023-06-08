@@ -18,6 +18,10 @@ import scapy.all as scapy
 
 import random
 
+import phonenumbers
+
+from phonenumbers import geocoder,carrier,timezone
+
 os.system("pip3 install ipaddress")
 
 os.system("pip3 install requests")
@@ -25,6 +29,8 @@ os.system("pip3 install requests")
 os.system("pip3 install colorama")
 
 os.system("pip3 install scapy")
+
+os.system("pip3 install phonenumbers")
 
 print(Fore.RED + "")
 
@@ -127,7 +133,7 @@ print("> welcome to the menu")
 
 time.sleep(1)
 
-print(Fore.BLUE + """
+print(Fore.CYAN + """
 
 [1] NMAP SCANNER
 
@@ -140,6 +146,8 @@ print(Fore.BLUE + """
 [5] SUBNET SCANNER
 
 [6] DDOS SALDIRISI YAP
+
+[7] TELEFON NUMARADAN BİLGİ AL +90
 
 """)
 
@@ -174,8 +182,10 @@ if islemno=="4":
         time.sleep(2)
 
         print(Fore.YELLOW + "> https://tinyurl.com/uppdatesnew <")
-
+print(Fore.CYAN + "")
 if islemno=="5":
+
+    os.system("figlet subnet")
 
     ip_adresi = input("IP adresini girin (örneğin, 192.168.0.0): ")
 
@@ -203,7 +213,7 @@ if islemno == "6":
 
     bytes = random._urandom(1490)
 
-    print(Fore.BLUE + "")
+    print(Fore.CYAN + "")
 
     os.system("figlet DDOS")
 
@@ -241,7 +251,50 @@ if islemno == "6":
 
     input("çıkmak için enter tuşuna bas...")
             
-   
+print(Fore.GREEN + "")
+
+if islemno == "7":
+
+    def phone_info():
+
+        while True:
+
+            os.system("figlet phone number")
+
+            print("[1] Çıkış")
+
+            print("[2] Telefon numarasından bilgi al")
+
+            i = input("İşlem numarası giriniz: ")
+
+            def operation():
+
+                if i == "1":
+
+                    exit()
+
+                elif i == "2":
+
+                    number = input("Telefon numarasını ülke kodu ile birlikte gir (+90) : ")
+
+                    phone_number = phonenumbers.parse(number, None)
+
+                    print("Ülke/Şehir-Country/City: ", geocoder.description_for_number(phone_number, "tr"))
+
+                    print("Saat dilimi-Time zone: ", timezone.time_zones_for_number(phone_number))
+
+                    print("Operatör-Operator: ", carrier.name_for_number(phone_number, "tr"))
+
+                else:
+
+                    print("Hatalı")
+
+            operation()
+
+    phone_info()  
+
+
+
 islemno = input("LÜTFEN 1 SAYISINA TIKLAYINIZ:  ")
 
 print("--------------------------------------")
