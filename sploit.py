@@ -326,7 +326,9 @@ if islemno == "8":
     os.system("dig +trace  " + hedefip)
     time.sleep(1)
     os.system("dig +short  " + hedefip)
-   
+    time.sleep(1)
+    os.system("dig SOA " +hedefip)
+    time.sleep(1)
     print("İşlem tamamlandı.")
 
 if islemno == "9":
