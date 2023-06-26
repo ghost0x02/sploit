@@ -170,6 +170,7 @@ print(Fore.CYAN + """
 
 [9] PİNG TARA
 
+[10] ÇIKIŞ
 """)
 
 print(Style.RESET_ALL)
@@ -366,7 +367,8 @@ if islemno == "9":
 
     print(ping_result)
 
-
+if islemno == "10":
+os.system("exit")
 
 islemno = input("LÜTFEN 1 SAYISINA TIKLAYINIZ:  ")
 
