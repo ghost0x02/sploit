@@ -334,9 +334,12 @@ islemno = "3"
 if islemno == "3":
     sys.exit()
       
-if islemno=="0":
-anapg()
 
+def cupp():
+    islemno = input("İşlem No Giriniz: ")
+    
+    if islemno == "0":
+        anapg()
     else:
         print("yanlış tuşlama")
         time.sleep(2)
