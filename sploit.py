@@ -73,7 +73,11 @@ print(Fore.YELLOW +  """
 
         insta: enesxsec""")
 
-os.system("neofetch --ascii_distro alpine")
+print(Fore.RED + """ 
+.dP"Y8 88""Yb 88      dP"Yb  88 888888 888888 88""Yb 
+`Ybo." 88__dP 88     dP   Yb 88   88   88__   88__dP 
+o.`Y8b 88"""  88  .o Yb   dP 88   88   88""   88"Yb  
+8bodP' 88     88ood8  YbodP  88   88   888888 88  Yb """)
 
 def yukleme_animasyonu():
 
