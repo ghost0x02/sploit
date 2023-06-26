@@ -335,7 +335,6 @@ if islemno == "3":
     sys.exit()
       
 if islemno=="0":
-os.system("")
 anapg()
 
     else:
