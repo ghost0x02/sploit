@@ -117,7 +117,8 @@ print(Fore.CYAN + """
 [7] TELEFON NUMARADAN BİLGİ AL +90
 [8] DİG TARAMASI YAP
 [9] PİNG TARA
-[10] ÇIKIŞ
+[10] IP TARA
+[11] ÇIKIŞ
 """)
 
 print(Style.RESET_ALL)
@@ -279,76 +280,8 @@ if islemno == "9":
     ping_result = ping(hedefip)
     print(ping_result)
 
-islemno = "10"
-if islemno == "10":
-    sys.exit()
-      
-islemno = input("LÜTFEN 1 SAYISINA TIKLAYINIZ:  ")
 
-print("--------------------------------------")
-
-islemno=input("wordlist aracına gitmek için enter bas yada çıkmak için CTRL+C yap: ")
-
-os.system("figlet wordlist")
-
-def cupp():
-
-    print(Fore.YELLOW + """
-
-[1] WORDLİST OLUŞTURMA ARACINI YÜKLE
-[2] WORDLİST OLUŞTURMA
-[3] ÇIKIŞ
-[0] IP TARA
-
-⟩ SİTE İP TARAMAK İSTİYORSANIZ 0 SAYISINA BASIN
-
-""")
-
-    islemno=input("secim: ")
-
-    if islemno=="1":
-
-        os.system("clear")
-
-        os.system("git clone https://github.com/Mebus/cupp.git")
-
-        print("Arac yüklenmiştir")
-
-        time.sleep(2)
-
-        os.system("clear")
-
-        cupp()
-
-    elif islemno=="2":
-
-        os.system("clear")
-
-        os.system("python3 ./cupp/cupp.py -i")
-
-        os.system("clear")
-
-        cupp()
-          
-islemno = "3"
-if islemno == "3":
-    sys.exit()
-      
-
-def cupp():
-    islemno = input("İşlem No Giriniz: ")
-    
-    if islemno == "0":
-        anapg()
-    else:
-        print("yanlış tuşlama")
-        time.sleep(2)
-        cupp()
-
-def anapg():
-    pass
-
-cupp()
+if islemno == "10":      
 
 print(">>>>>Biraz bekleyin site ip tarama aracına yönlendiriliyorsunuz<<<<<")
 time.sleep(3)
@@ -387,3 +320,7 @@ print(f'continente/cidade = {timez}')
 print(f'isp = {op}')
 print(f'org = {org}')
 print(f'As = {As}')
+
+islemno = "11"
+if islemno == "11":
+    sys.exit()
