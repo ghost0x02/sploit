@@ -281,45 +281,43 @@ if islemno == "9":
     print(ping_result)
 
 
-if islemno == "10":      
+if islemno == "10":
+    os.system("figlet ip")
+    ip = input('site adı gir: ')
 
-print(">>>>>Biraz bekleyin site ip tarama aracına yönlendiriliyorsunuz<<<<<")
-time.sleep(3)
-os.system("figlet ip")
-ip = input('site adı gir: ')
+    a = f'http://ip-api.com/json/{ip}'
 
-a = f'http://ip-api.com/json/{ip}'
+    a2 = requests.get(a)
+    a3 = a2.json()
+    status = a3["status"]
+    cidade = a3["city"]
+    q = a3["query"]
+    país = a3["country"]
+    cdp = a3["countryCode"]
+    sestate = a3["region"]
+    state = a3["regionName"]
+    zip = a3["zip"]
+    lat = a3["lat"]
+    long = a3["lon"]
+    timez = a3["timezone"]
+    op = a3["isp"]
+    org = a3["org"]
+    As = a3["as"]
 
-a2 = requests.get(a)
-a3 = a2.json()
-status = a3["status"]
-cidade = a3["city"]
-q = a3["query"]
-país = a3["country"]
-cdp = a3["countryCode"]
-sestate = a3["region"]
-state = a3["regionName"]
-zip = a3["zip"]
-lat = a3["lat"]
-long = a3["lon"]
-timez = a3["timezone"]
-op = a3["isp"]
-org = a3["org"]
-As = a3["as"]
-
-print(f'ip = {q}')
-print(f'status = {status}')
-print(f'país  = {país}')
-print(f'sigla = {cdp}')
-print(f'estado = {state}-{sestate}')
-print(f'cidade = {cidade}')
-print(f'zip = {zip}')
-print(f'latitude = {lat}')
-print(f'longitude = {long}')
-print(f'continente/cidade = {timez}')
-print(f'isp = {op}')
-print(f'org = {org}')
-print(f'As = {As}')
+    print(f'ip = {q}')
+    print(f'status = {status}')
+    print(f'país  = {país}')
+    print(f'sigla = {cdp}')
+    print(f'estado = {state}-{sestate}')
+    print(f'cidade = {cidade}')
+    print(f'zip = {zip}')
+    print(f'latitude = {lat}')
+    print(f'longitude = {long}')
+    print(f'continente/cidade = {timez}')
+    print(f'isp = {op}')
+    print(f'org = {org}')
+    print(f'As = {As}')
+      
 
 islemno = "11"
 if islemno == "11":
