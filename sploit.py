@@ -40,7 +40,7 @@ os.system("apt install neofetch")
 
 print(Fore.RED + "")
 
-os.system("figlet sploiter")
+os.system("figlet isletim")
       
 
 
@@ -63,7 +63,7 @@ for category, info in system_info.items():
     print() 
 
 
-
+time.sleep(3) 
 
 print(Style.RESET_ALL)
 
