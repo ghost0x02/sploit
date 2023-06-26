@@ -334,9 +334,9 @@ islemno = "3"
 if islemno == "3":
     sys.exit()
       
-    elif islemno=="0":
-        os.system("")
-        anapg()
+if islemno=="0":
+os.system("")
+anapg()
 
     else:
         print("yanlış tuşlama")
